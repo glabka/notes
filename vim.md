@@ -9,6 +9,7 @@
 * [number]% - go to [number] percent of file
 * w - go to beginning of the next word
 * e - go to end of the next word
+* b - go to beginning of previous word
 * ge - go to end of the previous word
 * ^ - go to beginning of line
 * $ - go to end of line
@@ -35,3 +36,5 @@
 * # - go to previous occurrence of the word under cursor
 * ma + d'a - set mark a at current location (then move to different line) + delete from current line to line mark a
 * >aB - auto reindent a block
+* p - paste after the cursor
+* P - paste before the cursor
