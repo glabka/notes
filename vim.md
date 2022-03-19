@@ -19,7 +19,10 @@
 * d - delete
 * dw - delete up to end of the next word
 * de - delete up to beginning the next word
+* d[number]b - delete [number] of to the left of cursor
 * dd - delete line
+* d0 - delete from cursor to begginning of line
+* d$ - delete from cursor to end of line
 * u - undo
 * ctrl + r - redo
 * [number]yw - copy next [number] of words
@@ -38,3 +41,4 @@
 * >aB - auto reindent a block
 * p - paste after the cursor
 * P - paste before the cursor
+* "+p - paste from system clipboard
