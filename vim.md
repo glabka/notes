@@ -42,3 +42,4 @@
 * p - paste after the cursor
 * P - paste before the cursor
 * "+p - paste from system clipboard
+* :s/regex/text/g - substitute all matches from regex with text in current line. (in begginning of regex write \v for 'very magic' for special characters and escaping to work as I know it from java)
