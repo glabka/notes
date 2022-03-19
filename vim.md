@@ -11,7 +11,6 @@
 * S - delete line and enter insert mode
 * p - paste after the cursor
 * P - paste before the cursor
-* "+p - paste from ubuntu system clipboard
 ## moving around
 * h / j / k / l - move around in normal mode
 * /[text] - to find and go to [text], press n to go to  next occurrence, N to go to previous one
@@ -44,11 +43,23 @@
 * ci" - delete and copy everything inside the ""
 * yaB - copy everything within brackets a bracket block included
 * df[character] - delete everything until the [character] including the character
-# other commands
+## registers
+* "kyy - copy current line into a register k
+* "Kyw - append next word into a register k
+* "kp - paste from register k
+* "+p - paste from ubuntu system clipboard
+* "*p - paste from windows system clipboard / from mouse highlight clipboard on Linux
+### more info about registers
+* register name: - - small delete register - for smaller deletes than a line
+* register 0 - 
+## other commands
 * zt / zz / zb - fix cursor and scroll text to top / center / bottom
 * ma + d'a - set mark a at current location (then move to different line) + delete from current line to line mark a
 * >aB - auto reindent a block
-# command-line mode
+## command-line mode
 * :s/regex/text/g - substitute all matches from regex with text in current line. (in begginning of regex write \v for 'very magic' for special characters and escaping to work as I know it from java)
 * :help [command] - help page for command
 * :wq! - force (because of !) the (w)rite and (q)uit
+* :reg - Display the type and contents of all numbered and named registers
+* :reg [arg]- Display the type and contents of [arg] register
+ 
