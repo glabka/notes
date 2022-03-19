@@ -1,15 +1,17 @@
 # vim
 * i - insert mode
+* r[character] - replaces a current character with {character}
 * ecs - escape to normal mode
-* hjkl - move around in normal mode
+* h / j / k / l - move around in normal mode
 * /[text] - to find and go to [text], press n to go to  next occurrence, N to go to previous one
 * ?[text] - to find and go to previous occurrence of [text]
-* f[character] - go to next [character] in line
-* H/M/L - go to highest/middle/lowest line on screen
+* f[character] / F[character] - go to next / previous [character] in line
+* t[character] / T[character] - go to next / previous [character] in line, cursor set before this {character}
+* H / M / L - go to highest/middle/lowest line on screen
 * [number]% - go to [number] percent of file
-* w/W - go to beginning of the next word (punctuation considered a word / words are separated by spaces)
-* e/E - go to end of the next word (punctuation considered a word / words are separated by spaces)
-* b/B - go to beginning of previous word (punctuation considered a word / words are separated by spaces)
+* w / W - go to beginning of the next word (punctuation considered a word / words are separated by spaces)
+* e / E - go to end of the next word (punctuation considered a word / words are separated by spaces)
+* b / B - go to beginning of previous word (punctuation considered a word / words are separated by spaces)
 * ge - go to end of the previous word
 * ^ - go to beginning of line
 * $ - go to end of line
@@ -43,3 +45,5 @@
 * P - paste before the cursor
 * "+p - paste from system clipboard
 * :s/regex/text/g - substitute all matches from regex with text in current line. (in begginning of regex write \v for 'very magic' for special characters and escaping to work as I know it from java)
+* :help [command] - help page for command
+* :wq! - force (because of !) the (w)rite and (q)uit
