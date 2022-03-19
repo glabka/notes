@@ -11,6 +11,8 @@
 * S - delete line and enter insert mode
 * p - paste after the cursor
 * P - paste before the cursor
+* x - delete char
+* X - backspace
 ## moving around
 * h / j / k / l - move around in normal mode
 * /[text] - to find and go to [text], press n to go to  next occurrence, N to go to previous one
@@ -45,7 +47,7 @@
 * yaB - copy everything within brackets a bracket block included
 * df[character] - delete everything until the [character] including the character
 ## registers
-* "kyy - copy current line into a register k
+* "kyy - copy current line into a register k (can be any character a-z)
 * "Kyw - append next word into a register k
 * "kp - paste from register k
 * "+p - paste from ubuntu system clipboard
