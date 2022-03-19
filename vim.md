@@ -7,9 +7,9 @@
 * f[character] - go to next [character] in line
 * H/M/L - go to highest/middle/lowest line on screen
 * [number]% - go to [number] percent of file
-* w - go to beginning of the next word
-* e - go to end of the next word
-* b - go to beginning of previous word
+* w/W - go to beginning of the next word (punctuation considered a word / words are separated by spaces)
+* e/E - go to end of the next word (punctuation considered a word / words are separated by spaces)
+* b/B - go to beginning of previous word (punctuation considered a word / words are separated by spaces)
 * ge - go to end of the previous word
 * ^ - go to beginning of line
 * $ - go to end of line
