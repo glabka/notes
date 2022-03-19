@@ -23,7 +23,8 @@
 * e / E - go to end of the next word (punctuation considered a word / words are separated by spaces)
 * b / B - go to beginning of previous word (punctuation considered a word / words are separated by spaces)
 * ge - go to end of the previous word
-* ^ - go to beginning of line
+* 0 - go to beggining of line
+* ^ - go to beginning of line (firt non-blank character)
 * $ - go to end of line
 * gg - go to beginning of file
 * G - go to last line
@@ -51,13 +52,22 @@
 * "*p - paste from windows system clipboard / from mouse highlight clipboard on Linux
 ### more info about registers
 * register name: - - small delete register - for smaller deletes than a line
-* register 0 - 
+* register 0 - yang (y) command's register
+* register 1-9 0 registers for d or c commands (starts with 1, after another use moved to the following register). Saves only deletes of line or more.
+* register . - last inserted text (read only)
+* register % - holds name of current file (read only)
+* register = - stores a vim expression
+### expressions
+* "=[expression] - writes an expression into an expression regiser (example of expressions are "5+4" or "abs(2 - 11)")
+* :put = - insert evaluation of vim expression stored in = register whlie in normal mode
+* ctrl+r - allows you to write =[expression] that will be directly evaluated and inserted after pressing the enter button
 ## other commands
 * zt / zz / zb - fix cursor and scroll text to top / center / bottom
 * ma + d'a - set mark a at current location (then move to different line) + delete from current line to line mark a
 * >aB - auto reindent a block
 ## command-line mode
 * :s/regex/text/g - substitute all matches from regex with text in current line. (in begginning of regex write \v for 'very magic' for special characters and escaping to work as I know it from java)
+* :%s/regex/text/g - same as :s/regex/text/g but for the whole file
 * :help [command] - help page for command
 * :wq! - force (because of !) the (w)rite and (q)uit
 * :reg - Display the type and contents of all numbered and named registers
