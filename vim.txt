@@ -54,6 +54,7 @@
 * ci" - delete and copy everything inside the ""
 * yaB - copy everything within brackets a bracket block included
 * df[character] - delete everything until the [character] including the character
+* dt[character] - delete everything until the [character] NOT including the character
 
 ## registers
 * "kyy - copy current line into a register k (can be any character a-z)
@@ -74,6 +75,11 @@
 * "=[expression] - writes an expression into an expression regiser (example of expressions are "5+4" or "abs(2 - 11)")
 * :put = - insert evaluation of vim expression stored in = register whlie in normal mode
 * ctrl+r - allows you to write =[expression] that will be directly evaluated and inserted after pressing the enter button
+
+## recording
+* q[letter] - starts recording following sequence of commands to macro named by letter
+* q - quits recording
+* @[letter] - recorded commands under macro named [letter] are repeated
 
 ## other commands
 * zt / zz / zb - fix cursor and scroll text to top / center / bottom
