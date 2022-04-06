@@ -15,6 +15,7 @@
 * P - paste before the cursor
 * x - delete char
 * X - backspace
+* J - concatinate (join) line with the following one
 
 ## navigation
 * h / j / k / l - move around in normal mode
