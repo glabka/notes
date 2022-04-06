@@ -89,6 +89,7 @@
 ## command-line mode
 * :s/regex/text/g - substitute all matches from regex with text in current line. (in begginning of regex write \v for 'very magic' for special characters and escaping to work as I know it from java)
 * :%s/regex/text/g - same as :s/regex/text/g but for the whole file
+* :%s/regex/text/gc - same as above but let you confirm each occurance replacement
 * :help [command] - help page for command
 * :wq! - force (because of !) the (w)rite and (q)uit
 * :reg - Display the type and contents of all numbered and named registers
