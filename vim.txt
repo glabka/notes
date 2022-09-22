@@ -1,0 +1,97 @@
+# vim
+
+## some basic commands
+* i - insert mode
+* r[character] - replaces a current character with {character}
+* ecs - escape to normal mode
+* . - repeat last command
+* ; - repeat f or t command
+* u - undo
+* ctrl + r - redo
+* o - add line bellow and go to insert mode
+* O - add line above and go to insert mode
+* S - delete line and enter insert mode
+* p - paste after the cursor
+* P - paste before the cursor
+* x - delete char
+* X - backspace
+* J - concatinate (join) line with the following one
+
+## navigation
+* h / j / k / l - move around in normal mode
+* /[text] - to find and go to [text], press n to go to  next occurrence, N to go to previous one
+* ?[text] - to find and go to previous occurrence of [text]
+* f[character] / F[character] - go to next / previous [character] in line
+* t[character] / T[character] - go to next / previous [character] in line, cursor set before this {character}
+* H / M / L - go to highest/middle/lowest line on screen
+* [number]% - go to [number] percent of file
+* w / W - go to beginning of the next word (punctuation considered a word / words are separated by spaces)
+* e / E - go to end of the next word (punctuation considered a word / words are separated by spaces)
+* b / B - go to beginning of previous word (punctuation considered a word / words are separated by spaces)
+* ge - go to end of the previous word
+* 0 - go to beggining of line
+* ^ - go to beginning of line (firt non-blank character)
+* $ - go to end of line
+* gg - go to beginning of file
+* G - go to last line
+* [number]G - go to line of number [number]
+* * - go to next occurrence of the word under cursor
+* # - go to previous occurrence of the word under cursor
+* '. - jump to last modified line
+* `. - jump to exact spot in last modified line
+* ctrl + o - retrace your movements in file in backwards
+* ctrl + i - retrace your movements in file in forwards
+
+## operators
+* d - delete
+* dw - delete up to end of the next word
+* de - delete up to beginning the next word
+* d[number]b - delete [number] of to the left of cursor
+* dd - delete line
+* d0 - delete from cursor to begginning of line
+* d$ - delete from cursor to end of line
+* [number]yw - copy next [number] of words
+* c% / d% / y% - delete and copy / delete end copy / copy all upcoming characters with opening and ending of special characters like parenthesis e.g. copy "equivalent(entry.key(), qk.key)"
+* ci" - delete and copy everything inside the ""
+* yaB - copy everything within brackets a bracket block included
+* df[character] - delete everything until the [character] including the character
+* dt[character] - delete everything until the [character] NOT including the character
+
+## registers
+* "kyy - copy current line into a register k (can be any character a-z)
+* "Kyw - append next word into a register k
+* "kp - paste from register k
+* "+p - paste from ubuntu system clipboard
+* "*p - paste from windows system clipboard / from mouse highlight clipboard on Linux
+
+### more info about registers
+* register name: - - small delete register - for smaller deletes than a line
+* register 0 - yang (y) command's register
+* register 1-9 0 registers for d or c commands (starts with 1, after another use moved to the following register). Saves only deletes of line or more.
+* register . - last inserted text (read only)
+* register % - holds name of current file (read only)
+* register = - stores a vim expression
+
+### expressions
+* "=[expression] - writes an expression into an expression regiser (example of expressions are "5+4" or "abs(2 - 11)")
+* :put = - insert evaluation of vim expression stored in = register whlie in normal mode
+* ctrl+r - allows you to write =[expression] that will be directly evaluated and inserted after pressing the enter button
+
+## recording
+* q[letter] - starts recording following sequence of commands to macro named by letter
+* q - quits recording
+* @[letter] - recorded commands under macro named [letter] are repeated
+
+## other commands
+* zt / zz / zb - fix cursor and scroll text to top / center / bottom
+* ma + d'a - set mark a at current location (then move to different line) + delete from current line to line mark a
+* >aB - auto reindent a block
+
+## command-line mode
+* :s/regex/text/g - substitute all matches from regex with text in current line. (in begginning of regex write \v for 'very magic' for special characters and escaping to work as I know it from java)
+* :%s/regex/text/g - same as :s/regex/text/g but for the whole file
+* :%s/regex/text/gc - same as above but let you confirm each occurance replacement
+* :help [command] - help page for command
+* :wq! - force (because of !) the (w)rite and (q)uit
+* :reg - Display the type and contents of all numbered and named registers
+* :reg [arg]- Display the type and contents of [arg] register
